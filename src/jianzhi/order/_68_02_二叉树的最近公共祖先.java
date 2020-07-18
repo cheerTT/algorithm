@@ -1,5 +1,7 @@
 package jianzhi.order;
 
+import java.util.*;
+
 public class _68_02_二叉树的最近公共祖先 {
 
     class TreeNode {
@@ -9,6 +11,7 @@ public class _68_02_二叉树的最近公共祖先 {
         TreeNode(int x) { val = x; }
     }
 
+    // 递归实现
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
         if (root == null || root == p || root == q) return root;
@@ -22,5 +25,40 @@ public class _68_02_二叉树的最近公共祖先 {
         if (right == null) return left;
         // 否则返回当前节点
         return root;
+    }
+
+    // 非递归实现
+    public TreeNode lowestCommonAncestor1(TreeNode root, TreeNode p, TreeNode q) {
+
+        Map<TreeNode, TreeNode> parent = new HashMap<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+
+        queue.add(root);
+
+        // 先确定每个节点的父节点
+        while (!parent.containsKey(p) || !parent.containsKey(q)) {
+            TreeNode node = queue.poll();
+            if (node.left != null) {
+                parent.put(node.left, node);
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                parent.put(node.right, node);
+                queue.offer(node.right);
+            }
+        }
+
+        Set<TreeNode> ancestor = new HashSet<>();
+
+        while (p != null) {
+            ancestor.add(p);
+            p = parent.get(p);
+        }
+
+        while (!ancestor.contains(q)) {
+            q = parent.get(q);
+        }
+
+        return q;
     }
 }
