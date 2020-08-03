@@ -4,6 +4,7 @@ public class _01_BubbleSort {
 
     public void bubbleSort(int[] nums) {
 
+        // 每次交换相邻两个数
         for (int i = 0; i < nums.length; i++) {
             for (int j = i; j < nums.length; j++) {
 
