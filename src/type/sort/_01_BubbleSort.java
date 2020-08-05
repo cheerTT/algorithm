@@ -5,13 +5,14 @@ public class _01_BubbleSort {
     public void bubbleSort(int[] nums) {
 
         // 每次交换相邻两个数
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i; j < nums.length; j++) {
+        //
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = 0; j < nums.length - i - 1; j++) {
 
-                if (nums[i] > nums[j]) {
-                    int tmp = nums[i];
-                    nums[i] = nums[j];
-                    nums[j] = tmp;
+                if (nums[j] > nums[j + 1]) {
+                    int tmp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = tmp;
                 }
             }
         }
