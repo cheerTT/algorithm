@@ -1,6 +1,4 @@
-package type.stack;
-
-import com.sun.javafx.image.IntPixelGetter;
+package type.monotonousstack;
 
 import java.util.Stack;
 

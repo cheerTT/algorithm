@@ -1,6 +1,4 @@
-package type.stack;
-
-import com.sun.org.apache.bcel.internal.generic.POP;
+package type.monotonousstack;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package type.stack;
+package type.monotonousstack;
 
 import java.util.Stack;
 
