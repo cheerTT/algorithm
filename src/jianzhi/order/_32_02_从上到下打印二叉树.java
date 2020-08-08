@@ -26,8 +26,10 @@ public class _32_02_从上到下打印二叉树 {
 
         while (!queue.isEmpty()) {
 
+            int num = queue.size();
+
             List<Integer> list = new ArrayList<>();
-            for (int i = 0; i < queue.size(); i++) {
+            for (int i = 0; i < num; i++) {
                 TreeNode node = queue.poll();
                 list.add(node.val);
 
