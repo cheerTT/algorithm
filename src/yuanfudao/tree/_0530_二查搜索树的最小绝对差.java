@@ -1,6 +1,6 @@
 package yuanfudao.tree;
 
-public class _530_二查搜索树的最小绝对差 {
+public class _0530_二查搜索树的最小绝对差 {
 
     static class TreeNode {
         int val;
