@@ -16,9 +16,9 @@ public class _19_正则表达式的匹配 {
          if ( i != s.length() && j == p.length()) return false;
 
          // 当 p 的下一个字符是 * 的时候
-         if (j < p.length() - 1 && p.charAt(j + 1) == '*') {
+         if (j < p.length() && p.charAt(j + 1) == '*') {
              // //当前匹配
-            if (i < s.length() && s.charAt(i) == p.charAt(j) || s.charAt(i) == '.') {
+            if (i < s.length() && s.charAt(i) == p.charAt(j) || p.charAt(i) == '.') {
                 // // // 字符串和模式串都向后移动
                 // // // 字符串不动，模式串向后移动
                 // // // 字符串向后移动，模式串不动
@@ -33,7 +33,7 @@ public class _19_正则表达式的匹配 {
 
          // 当 p 的下一个字符不是 * 的时候
          // // 当前匹配
-         if (i < s.length() - 1 && s.charAt(i) == p.charAt(j) || p.charAt(j) == '.') {
+         if (i < s.length() && s.charAt(i) == p.charAt(j) || p.charAt(j) == '.') {
              // // // 字符串和模式串都向后移动
              return help(s, p, i + 1, j + 1);
          }
