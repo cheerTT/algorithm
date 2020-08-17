@@ -29,7 +29,7 @@ public class _19_正则表达式匹配 {
                         help(s, p, i, j + 2) || // 当前不动，下一个动，代表 0个
                         help(s, p, i + 1, j + 2); // 代表 1 个
             } else { // 不匹配
-                return help(s, p, i + 1, j + 2);
+                return help(s, p, i, j + 2);
             }
         } else { // 下一个字符不是 * 的时候
             // 当前匹配
