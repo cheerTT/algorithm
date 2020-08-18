@@ -17,7 +17,7 @@ public class _0416_分割等和子集 {
             dp[i][0] = true;
         }
 
-        for (int i = 1; i <= N; i++) {
+        for (int i = 1; i <= N; i++) { // 遍历背包
             for (int j = 1; j <= W; j++) {
                 if (j >= nums[i - 1]) {
                     dp[i][j] = dp[i - 1][j - nums[i - 1]] | dp[i - 1][j];
@@ -51,6 +51,7 @@ public class _0416_分割等和子集 {
         dp[0] = true;  // 没放物品时肯定是 true
         for (int num : nums) {
             for (int i = W; i >= num ; i--) {
+                // 从后往前，先计算dp[i],再计算dp[i - num]
                 dp[i] = dp[i] || dp[i - num];
             }
         }
