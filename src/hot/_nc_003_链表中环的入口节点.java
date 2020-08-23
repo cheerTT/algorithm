@@ -2,7 +2,7 @@ package hot;
 
 import java.util.List;
 
-public class _nc_03_链表中环的入口节点 {
+public class _nc_003_链表中环的入口节点 {
 
     class ListNode {
         int val;

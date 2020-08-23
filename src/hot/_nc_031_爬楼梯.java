@@ -1,6 +1,6 @@
 package hot;
 
-public class _nc_31_爬楼梯 {
+public class _nc_031_爬楼梯 {
 
     // 递推方程
     // dp[n] = dp[n - 1] + dp[n - 2];

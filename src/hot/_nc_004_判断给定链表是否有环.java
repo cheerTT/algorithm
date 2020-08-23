@@ -1,6 +1,6 @@
 package hot;
 
-public class _nc_04_判断给定链表是否有环 {
+public class _nc_004_判断给定链表是否有环 {
 
     class ListNode {
         int val;

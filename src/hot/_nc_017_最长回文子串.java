@@ -2,7 +2,7 @@ package hot;
 
 import sun.reflect.generics.tree.Tree;
 
-public class _nc_17_最长回文子串 {
+public class _nc_017_最长回文子串 {
 
     // 计算最长回文子串的长度
     // dp[i][j] 从 i 到 j 是否为回文子串

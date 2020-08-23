@@ -1,6 +1,6 @@
 package hot;
 
-public class _nc_59_矩阵的最小路径和 {
+public class _nc_059_矩阵的最小路径和 {
 
     // dp[i][j] 表示从 (i, j) 到原点的最小和
     public int minPathSum (int[][] matrix) {
@@ -22,7 +22,7 @@ public class _nc_59_矩阵的最小路径和 {
 
     public static void main(String[] args) {
 
-        _nc_59_矩阵的最小路径和 solution = new _nc_59_矩阵的最小路径和();
+        _nc_059_矩阵的最小路径和 solution = new _nc_059_矩阵的最小路径和();
 
         int[][] matric = {{1, 3, 5 ,9}, {8, 1, 3, 4}, {5, 0, 6, 1}, {8, 8, 4, 0}};
         int res = solution.minPathSum(matric);

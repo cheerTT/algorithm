@@ -1,6 +1,6 @@
 package hot;
 
-public class _nc_34_带权值的最小路径和 {
+public class _nc_034_带权值的最小路径和 {
 
     // 在原数组上操作，最终返回 grid[m - 1][n - 1]
     public int minPathSum (int[][] grid) {

@@ -4,7 +4,7 @@ import sun.reflect.generics.tree.Tree;
 
 import java.util.Stack;
 
-public class _nc_11_将升序数组转化为平衡二叉树 {
+public class _nc_011_将升序数组转化为平衡二叉树 {
 
     class TreeNode {
         int val = 0;

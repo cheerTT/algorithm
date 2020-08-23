@@ -4,7 +4,7 @@ import javax.swing.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class _nc_01_求二叉树的前序遍历 {
+public class _nc_001_求二叉树的前序遍历 {
 
     class TreeNode {
       int val = 0;

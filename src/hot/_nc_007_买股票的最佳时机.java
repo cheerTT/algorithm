@@ -1,6 +1,6 @@
 package hot;
 
-public class _nc_07_买股票的最佳时机 {
+public class _nc_007_买股票的最佳时机 {
 
     // 只有买入之后才可以卖出，只有一次交易机会
     // dp[i][0] 买入 i 后的最大利润

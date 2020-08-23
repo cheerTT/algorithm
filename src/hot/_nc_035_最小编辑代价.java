@@ -1,6 +1,6 @@
 package hot;
 
-public class _nc_35_最小编辑代价 {
+public class _nc_035_最小编辑代价 {
 
     public int minEditCost (String str1, String str2, int ic, int dc, int rc) {
 

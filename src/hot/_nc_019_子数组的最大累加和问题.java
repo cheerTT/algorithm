@@ -1,6 +1,6 @@
 package hot;
 
-public class _nc_19_子数组的最大累加和问题 {
+public class _nc_019_子数组的最大累加和问题 {
 
     // dp[i][j] 表示从位置 i 加到 j的最大和
     public int maxsumofSubarray(int[] arr) {

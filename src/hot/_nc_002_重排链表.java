@@ -1,8 +1,6 @@
 package hot;
 
-import java.util.List;
-
-public class _nc_02_重排链表 {
+public class _nc_002_重排链表 {
 
     class ListNode {
         int val;
@@ -63,7 +61,7 @@ public class _nc_02_重排链表 {
 
     public static void main(String[] args) {
 
-        _nc_02_重排链表 solution = new _nc_02_重排链表();
+        _nc_002_重排链表 solution = new _nc_002_重排链表();
 
         ListNode node1 = solution.new ListNode(1);
         ListNode node2 = solution.new ListNode(2);

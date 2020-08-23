@@ -1,6 +1,6 @@
 package hot;
 
-public class _nc_44_通配符匹配 {
+public class _nc_044_通配符匹配 {
 
     // dp[i][j] 表示 s字符串的前 i 个字符与 p 字符串的前 j 个字符是否匹配
     // 若当前匹配则 dp[i][j] = dp[i - 1][j - 1]
