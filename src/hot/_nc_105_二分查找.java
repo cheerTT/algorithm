@@ -1,27 +1,26 @@
 package hot;
 
+import java.util.logging.Level;
+
 public class _nc_105_二分查找 {
 
     public int upper_bound_ (int n, int v, int[] a) {
 
-        return binSearch(a, v);
+//        return binSearch(a, v);
+        return help(a, 0, n, v) + 1;
     }
 
-    private int help(int[] a, int i, int j, int v) {
+    private int help(int[] a, int left, int right, int v) {
 
-        if (i > j) return a.length;
+        while (left < right) {
+            int mid = (left + right) / 2;
 
-        int mid = (i + j) / 2;
-
-        if (a[mid] == v) return mid;
-
-        if (a[mid] > v) {
-            j = mid - 1;
-            return help(a, i, j, v);
-        } else {
-            i = mid + 1;
-            return help(a, i, j, v);
+            if (a[mid] == v) right = mid;
+            else if (a[mid] < v) left = mid + 1;
+            else if (a[mid] > v) right = mid;
         }
+
+        return left;
     }
     private static int binSearch(int[] a, int key) {
         int mid = a.length / 2;
