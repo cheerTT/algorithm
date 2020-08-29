@@ -22,6 +22,7 @@ public class _nc_105_二分查找 {
 
         return left;
     }
+
     private static int binSearch(int[] a, int key) {
         int mid = a.length / 2;
         if (key == a[mid]) {
