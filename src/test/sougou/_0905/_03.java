@@ -1,11 +1,6 @@
 package test.sougou._0905;
 
-import org.omg.CORBA.INTERNAL;
-import sun.font.CompositeGlyphMapper;
-
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class _03 {
