@@ -1,41 +1,57 @@
 package test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class _01 {
 
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] arr =new int[n];
-        for(int i = 0;i<n;i++){
-            arr[i] = sc.nextInt();
-        }
-        int min = Integer.MAX_VALUE;
-        int count = 0;
-        for(int i = 0;i<n;i++){
-            for(int j = i+1;j<n;j++){
-                if(arr[j] < arr[i]){
-                    count++;
-                    min = arr[i] < min?arr[i]:min;
-                    break;
+
+        _01 solution = new _01();
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(38);
+        list1.add(1);
+        list1.add(11);
+        list1.add(21);
+    }
+
+    private List<List<Integer>> generate(List<Integer> list1, List<Integer> list2, List<Integer> weight) {
+
+        List<Integer> res1 = new ArrayList<>();
+        List<Integer> res2 = new ArrayList<>();
+
+        for (int i = 0; i < weight.size(); i++) {
+
+            int cnt = Math.max(list1.get(i), list2.get(i));
+
+            if (list1.get(i) == list2.get(i)) {
+                for (int j = 0; j < weight.get(i); j++) {
+                    res1.add(list1.get(i) + j);
+                    res2.add(list2.get(i) + j);
+                }
+            } else if (cnt == list1.get(i)) {
+                for (int j = 0; j < weight.get(i); j++) {
+                    res1.add(list1.get(i) + j);
+                }
+                for (int j = 0; j < weight.get(i); j++) {
+                    res2.add(list2.get(i) - j);
+                }
+            } else if (cnt == list2.get(i)) {
+                for (int j = 0; j < weight.get(i); j++) {
+                    res2.add(list2.get(i) - j);
+                }
+                for (int j = 0; j < weight.get(i); j++) {
+                    res1.add(list1.get(i) + j);
                 }
             }
         }
-        if(count == 0){
-            System.out.println(count);
-        }
-        else{
-            int k = n-1;
-            while(k>0){
-                if(arr[k] > min && arr[k] > arr[k-1]){
-                    count++;
-                    k--;
-                }
-               else
-                    break;
-            }
-            System.out.println(count);
-        }
+
+        List<List<Integer>> res = new ArrayList<>();
+        res.add(res1);
+        res.add(res2);
+
+        return res;
     }
 }
