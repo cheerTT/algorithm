@@ -11,6 +11,7 @@ public class _02_SelectSort {
             for (int j = i; j < nums.length; j++) {
                 if (nums[tmp] > nums[j]) {
                     tmp =  j;
+//                    break;
                 }
             }
             // 交换
